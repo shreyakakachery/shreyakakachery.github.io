@@ -1,3 +1,4 @@
+import Home from "./components/Home/Home.tsx"
 import InfoContainer from "./components/InfoContainer/InfoContainer.tsx";
 import EducationCard from "./components/EducationCard/EducationCard.tsx";
 import ExperienceCard from "./components/ExperienceCard/ExperienceCard.tsx";
@@ -10,6 +11,7 @@ import "./App.scss";
 function App() {
   return (
     <div className="app">
+      <Home />
       <InfoContainer
         title="Education"
         dataList={profileData.education}
