@@ -1,0 +1,58 @@
+{
+  "education": [
+    {
+      "program": "Master of Data Science",
+      "institution": "University of British Columbia",
+      "start": "Sep 2025",
+      "end": "Jun 2026"
+    },
+    {
+      "program": "BSc. Behavioural Neurosscience",
+      "institution": "University of British Columbia",
+      "start": "Sep 2020",
+      "end": "Apr 2024"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Language Database Administrator",
+      "location1": "Volentia Translation Services",
+      "location2": null,
+      "companyUrl": null,
+      "logoUrl": null,
+      "start": "Aug 2024",
+      "end": "Present",
+      "description": "Create and maintain a multilingual database of medical terminology. ",
+      "skills": ["Database management"]
+    },
+    {
+      "role": "Exam Invigilator",
+      "location1": "CBTF",
+      "location2": "University of British Columbia",
+      "companyUrl": null,
+      "logoUrl": null,
+      "start": "Jan 2026",
+      "end": "Apr 2026",
+      "description": "Monitor and supervise examinations to ensure academic integrity. ",
+      "skills": ["Attention to detail"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Shreya's Portfolio",
+      "githubLink": "https://github.com/shreyakakachery/shreyakakachery.github.io",
+      "liveLink": "https://shreyakakachery.github.io",
+      "description": "A website showcasing my projects and experience.",
+      "why": "To present my skills and accomplishments in a professional manner.",
+      "tools": ["React", "TypeScript", "Sass"]
+    },
+    {
+      "title": "Healthcare Database Website",
+      "githubLink": null,
+      "liveLink": null,
+      "description": "A website displaying medical terminology translated in multiple languages.",
+      "why": "To create a resource for Volentia Trandlation Services",
+      "tools": ["Next.js", "TypeScript", "PicoCSS"]
+    }
+  ]
+}
