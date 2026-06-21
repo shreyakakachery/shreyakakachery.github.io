@@ -54,5 +54,22 @@
       "why": "To create a resource for Volentia Trandlation Services",
       "tools": ["Next.js", "TypeScript", "PicoCSS"]
     }
+  ],
+  "contacts": [
+    { "platform": "GitHub", 
+    "url": "https://github.com/shreyakakachery", 
+    "iconPath": null},
+    { "platform": "LinkedIn", 
+    "url": "https://www.linkedin.com/in/shreyakakachery/", 
+    "iconPath": null},
+    { "platform": "Medium", 
+    "url": "https://medium.com/@shreyakakachery", 
+    "iconPath": null},
+    { "platform": "SubStack", 
+    "url": "https://substack.com/@shreyakakachery", 
+    "iconPath": null},
+    { "platform": "YouTube", 
+    "url": "https://www.youtube.com/@shreycurious", 
+    "iconPath": null}
   ]
 }
