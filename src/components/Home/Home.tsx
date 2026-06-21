@@ -12,7 +12,7 @@ export default function Home() {
     const homeData: HomeInfo = profileData.home;
 
     return (
-        <section className="home-container">
+        <section id="home" className="home-container">
             <div className="home-content">
                 <div className="text-section">
                     <p className="greeting">Hi, my name is</p>

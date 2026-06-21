@@ -1,12 +1,19 @@
 import './InfoContainer.scss';
 
-export default function InfoContainer( { title, dataList, CardComponent }) {
+interface InfoContainerProps {
+    title: string;
+    dataList: any[];
+    CardComponent: React.ElementType;
+    id?: string;
+}
+
+export default function InfoContainer( { title, dataList, CardComponent, id }: InfoContainerProps) {
     if (!dataList || dataList.length === 0) {
         return null;
     }
 
     return (
-        <section className="info-container">
+        <section id={id} className="info-container">
             <h2 className="section-title">{
             title}
             </h2>

@@ -10,7 +10,7 @@ interface ContactInfo {
 export default function Contacts() {
     const contactsList: ContactInfo[] = profileData.contacts;
     return (
-        <section className="contacts-container">
+        <section id="contact" className="contacts-container">
             <h2 className="section-title">
                 Let's Connect!
             </h2>
