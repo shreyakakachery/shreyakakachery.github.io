@@ -1,4 +1,10 @@
 {
+  "home": {
+    "name": "Shreya Kakachery",
+    "tagline": "Jack of all trades, Master of Data Science",
+    "bio": "Actually, the full saying goes like this: 'Jack of all trades, master of none; still better than a master of one.' Here's my personal favourite: 'Curiosity killed the cat, but satisfaction brought it back.' Likewise, my goal is to expand my perspective; to live, learn, and grow. Experience is my teacher.",
+    "imagePath": null
+  },
   "education": [
     {
       "program": "Master of Data Science",
