@@ -61,7 +61,7 @@
       "tools": ["Next.js", "TypeScript", "PicoCSS"]
     }
   ],
-  "contacts": [
+  "contact": [
     { "platform": "GitHub", 
     "url": "https://github.com/shreyakakachery", 
     "iconPath": null},
