@@ -1,0 +1,60 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+
+.info-container {
+  @include section-padding;
+  @include container;
+
+  // Alternating section background; every even section gets ivory-warm
+  // Apply at the page level if needed by wrapping in a full-bleed parent,
+  // otherwise the container handles spacing only.
+}
+
+// ---- Section title ----------------------------------------------------------
+
+.section-title {
+  font-family: $font-display;
+  font-size: $fs-4xl;
+  font-weight: $fw-light;
+  letter-spacing: -0.03em;
+  color: $color-green-deep;
+  margin: 0 0 $space-3;
+  line-height: $lh-tight;
+
+
+  &::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 1px;
+    background-color: $color-gold;
+    margin-top: $space-4;
+    margin-bottom: $space-12;
+  }
+
+  @include bp-down(md) {
+    font-size: $fs-3xl;
+
+    &::after {
+      margin-bottom: $space-8;
+    }
+  }
+
+  @include bp-down(sm) {
+    font-size: $fs-2xl;
+  }
+}
+
+// ---- Cards grid -------------------------------------------------------------
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: $space-6;
+
+  @include bp-down(sm) {
+    grid-template-columns: 1fr;
+    gap: $space-4;
+  }
+}

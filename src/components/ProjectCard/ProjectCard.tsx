@@ -5,7 +5,7 @@ interface ProjectCardProps {
   githubLink: string | null;
   liveLink: string | null;
   description: string;
-  why: string;
+  why: string | null;
   tools: string[];
 }
 
@@ -45,12 +45,18 @@ export default function ProjectCard({
         </div>
       </div>
       <p className="description">
-        <strong>What:</strong>
         {description}
       </p>
-      <p className="description why-text">
+      {/* <p className="description why-text">
         <strong>Why: </strong> {why}
+      </p> */}
+
+      {why && why != null && (
+        <p className="description why-text">
+          {why}
+        {/* <strong>Why? </strong> {why} */}
       </p>
+      )}
 
       {tools && tools.length > 0 && (
         <div className="tags-container">

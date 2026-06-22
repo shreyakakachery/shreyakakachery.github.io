@@ -1,5 +1,128 @@
-* {
+// =============================================================================
+// App.scss — Global Entry Point
+// =============================================================================
+
+// Partials (order matters)
+@import "styles/partials/variables";
+@import "styles/partials/mixins";
+@import "styles/partials/typography";
+
+// -----------------------------------------------------------------------------
+// GLOBAL RESET / BASE
+// -----------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: $color-ivory;
+  color: $color-text-primary;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+// -----------------------------------------------------------------------------
+// LAYOUT HELPERS
+// -----------------------------------------------------------------------------
+
+.container {
+  @include container;
+}
+
+.container--narrow {
+  @include container($container-md);
+}
+
+.container--wide {
+  @include container($container-2xl);
+}
+
+.section {
+  @include section-padding;
+}
+
+.section--dark {
+  @include dark-section;
+}
+
+// -----------------------------------------------------------------------------
+// GOLD RULE UTILITY  (standalone <hr> or .gold-rule div)
+// -----------------------------------------------------------------------------
+
+.gold-rule {
+  @include gold-rule-line;
+  margin: $space-6 0;
+}
+
+hr.gold {
+  border: none;
+  height: 1px;
+  background-color: $color-gold;
+  opacity: 0.4;
+  margin: $space-8 0;
+}
+
+// -----------------------------------------------------------------------------
+// BUTTON GLOBALS
+// -----------------------------------------------------------------------------
+
+.btn {
+  @include btn-base;
+}
+
+.btn--primary {
+  @include btn-primary;
+}
+
+.btn--secondary {
+  @include btn-secondary;
+}
+
+.btn--ghost {
+  @include btn-ghost;
+}
+
+// -----------------------------------------------------------------------------
+// REDUCED MOTION
+// -----------------------------------------------------------------------------
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

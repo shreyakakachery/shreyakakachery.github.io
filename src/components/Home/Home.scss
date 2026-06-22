@@ -1,0 +1,154 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+
+.home-container {
+  @include section-padding($space-32, $space-24);
+  background-color: $color-ivory;
+  overflow: hidden;
+}
+
+.home-content {
+  @include container;
+}
+
+.text-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "greeting  image"
+    "name      image"
+    "tagline   image"
+    "bio       image";
+  column-gap: $space-16;
+  row-gap: $space-2;
+  align-items: start;
+  max-width: 900px;
+
+  @include bp-down(md) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "greeting"
+      "name"
+      "tagline"
+      "bio";
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+// ---- Greeting ---------------------------------------------------------------
+
+.greeting {
+  grid-area: greeting;
+  font-family: $font-body;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  letter-spacing: $ls-widest;
+  text-transform: uppercase;
+  color: $color-gold;
+  margin: 0;
+  line-height: $lh-normal;
+  align-self: end;
+}
+
+// ---- Name -------------------------------------------------------------------
+
+.name {
+  grid-area: name;
+  font-family: $font-display;
+  font-size: $fs-5xl;
+  font-weight: $fw-bold;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  color: $color-green-deep;
+  margin: $space-1 0 $space-4;
+
+  @include bp-down(md) {
+    font-size: $fs-4xl;
+  }
+
+  @include bp-down(sm) {
+    font-size: $fs-3xl;
+  }
+}
+
+// ---- Profile image ----------------------------------------------------------
+
+.image-section {
+  grid-area: image;
+  align-self: center;
+
+  @include bp-down(md) {
+    margin-bottom: $space-8;
+  }
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: $radius-full;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid $color-ivory-border;
+  box-shadow: $shadow-lg, 0 0 0 6px $color-ivory-warm;
+  // transition: box-shadow $transition-slow;
+
+  &:hover {
+    box-shadow: $shadow-lg, 0 0 0 6px $color-gold-subtle;
+  }
+
+  @include bp-down(sm) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.image-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: $radius-full;
+  background-color: $color-ivory-warm;
+  border: 2px dashed $color-ivory-border;
+
+  @include bp-down(sm) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+// ---- Tagline ----------------------------------------------------------------
+
+.home-tagline {
+  grid-area: tagline;
+  font-family: $font-display;
+  font-style: italic;
+  font-size: $fs-xl;
+  font-weight: $fw-semibold;
+  letter-spacing: $ls-tight;
+  color: $color-gold-dark;
+  line-height: $lh-snug;
+  margin: 0 0 $space-5;
+
+  @include bp-down(sm) {
+    font-size: $fs-xl;
+  }
+}
+
+// ---- Bio --------------------------------------------------------------------
+
+.bio {
+  grid-area: bio;
+  font-family: $font-body;
+  font-size: $fs-md;
+  line-height: $lh-relaxed;
+  color: $color-text-secondary;
+  max-width: 540px;
+  margin: 0;
+
+  @include bp-down(md) {
+    max-width: 100%;
+  }
+}

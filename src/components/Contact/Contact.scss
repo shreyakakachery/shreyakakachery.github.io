@@ -1,0 +1,82 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+
+.contact-container {
+  @include section-padding;
+  @include dark-section;
+  background-color: $color-green-deep;
+  text-align: center;
+
+  padding-left: $container-gutter;
+  padding-right: $container-gutter;
+
+  @include bp(lg) {
+    padding-left: $container-gutter-lg;
+    padding-right: $container-gutter-lg;
+  }
+}
+
+// ---- Section title ----------------------------------------------------------
+
+.contact-container .section-title {
+  font-family: $font-display;
+  font-size: $fs-4xl;
+  font-weight: $fw-light;
+  letter-spacing: -0.03em;
+  color: $color-text-inverse;
+  margin: 0 auto $space-3;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 1px;
+    background-color: $color-gold;
+    margin: $space-4 auto $space-8;
+  }
+
+  @include bp-down(md) {
+    font-size: $fs-3xl;
+  }
+}
+
+// ---- Intro text -------------------------------------------------------------
+
+.contact-text {
+  font-family: $font-body;
+  font-size: $fs-lg;
+  color: rgba($color-text-inverse, 0.7);
+  margin: 0 auto $space-12;
+  max-width: 400px;
+  line-height: $lh-normal;
+}
+
+// ---- Links grid -------------------------------------------------------------
+
+.links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space-4;
+  max-width: $container-md;
+  margin: 0 auto;
+}
+
+// ---- Contact card (each platform link) --------------------------------------
+
+.contact-card {
+  @include btn-ghost;
+
+  padding: $space-4 $space-8;
+  font-size: $fs-sm;
+  min-width: 140px;
+  border-radius: $radius-sm;
+
+  &:hover {
+    background-color: rgba($color-gold, 0.1);
+    border-color: $color-gold;
+    color: $color-gold-light;
+    box-shadow: $shadow-gold;
+  }
+}

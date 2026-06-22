@@ -31,7 +31,8 @@ export default function ExperienceCard({
             </div>
 
             <h4 className="subtitle">
-                {location1} {location2 && <span className="location-divider">| {location2}</span>} 
+                {location1}
+                {/* {location1} {location2 && <span className="location-divider">| {location2}</span>}  */}
             </h4>
 
             <p className="description">

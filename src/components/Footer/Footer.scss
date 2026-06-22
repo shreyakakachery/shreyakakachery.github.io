@@ -1,0 +1,39 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+
+.footer-container {
+  background-color: $color-green-deep;
+  border-top: $border-width solid rgba($color-gold, 0.25);
+  padding: $space-10 0;
+}
+
+.footer-content {
+  @include container;
+  @include flex-between;
+  gap: $space-4;
+  flex-wrap: wrap;
+
+  @include bp-down(sm) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.copyright {
+  font-family: $font-body;
+  font-size: $fs-sm;
+  color: rgba($color-text-inverse, 0.55);
+  margin: 0;
+  line-height: $lh-normal;
+}
+
+.tagline {
+  font-family: $font-display;
+  font-style: italic;
+  font-size: $fs-lg;
+  font-weight: $fw-light;
+  color: $color-gold-light;
+  letter-spacing: $ls-normal;
+}

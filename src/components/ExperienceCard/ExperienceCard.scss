@@ -1,0 +1,134 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+
+.portfolio-card.experience-card {
+  @include card;
+  padding: $space-8;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+
+
+  // ---------------------------------------------------------------------------
+  // HEADER
+  // ---------------------------------------------------------------------------
+
+  .card-header {
+    // @include flex-between;
+    // align-items: flex-column;
+    gap: $space-4;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-family: $font-display;
+    font-size: $fs-2xl;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-tight;
+    color: $color-green-deep;
+    line-height: $lh-snug;
+    margin: 0;
+    // flex: 1;
+  }
+
+  .date-badge {
+    font-family: $font-body;
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-wide;
+    text-transform: uppercase;
+    color: $color-green-forest;
+    // background-color: $color-gold-subtle;
+    // border: $border-width solid rgba($color-gold, 0.35);
+    // border-radius: $radius-full;
+    // padding: $space-1 $space-3;
+    white-space: nowrap;
+    // flex-shrink: 0;
+  }
+
+
+  // ---------------------------------------------------------------------------
+  // SUBTITLE
+  // ---------------------------------------------------------------------------
+
+  .subtitle {
+    font-family: $font-body;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-wide;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    margin: 0;
+  }
+
+  .location-divider {
+    color: $color-ivory-border;
+    margin-left: $space-2;
+    color: $color-text-muted;
+    font-weight: $fw-regular;
+  }
+
+
+  // ---------------------------------------------------------------------------
+  // DESCRIPTION
+  // ---------------------------------------------------------------------------
+
+  .description {
+    font-family: $font-body;
+    font-size: $fs-base;
+    line-height: $lh-relaxed;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+
+
+  // ---------------------------------------------------------------------------
+  // TAGS
+  // ---------------------------------------------------------------------------
+
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    margin-top: auto;
+    padding-top: $space-2;
+  }
+
+  .tag {
+    font-family: $font-body;
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-wide;
+    color: $color-green-forest;
+    background-color: $color-ivory-warm;
+    border: $border-width solid $color-ivory-border;
+    border-radius: $radius-sm;
+    padding: $space-1 $space-3;
+    white-space: nowrap;
+    transition: background-color $transition-fast, border-color $transition-fast;
+
+    &:hover {
+      background-color: $color-gold-subtle;
+      border-color: $color-gold;
+    }
+  }
+
+
+  // ---------------------------------------------------------------------------
+  // RESPONSIVE
+  // ---------------------------------------------------------------------------
+
+  @include bp-down(sm) {
+    padding: $space-6;
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .title {
+      font-size: $fs-xl;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@import "../../styles/partials/variables.scss";
+@import "../../styles/partials/mixins.scss";
+
+.portfolio-card.project-card {
+  @include card;
+  padding: $space-8;
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: $space-8;
+    right: $space-8;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-gold, transparent);
+    opacity: 0;
+    transition: opacity $transition-slow;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  // ---------------------------------------------------------------------------
+  // HEADER
+  // ---------------------------------------------------------------------------
+
+  .card-header {
+    @include flex-between;
+    gap: $space-4;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-family: $font-display;
+    font-size: $fs-2xl;
+    font-weight: $fw-light;
+    letter-spacing: $ls-tight;
+    color: $color-green-deep;
+    line-height: $lh-snug;
+    margin: 0;
+    flex: 1;
+  }
+
+  .links-container {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    flex-shrink: 0;
+  }
+
+  .link {
+    font-family: $font-body;
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-wide;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    text-decoration: none;
+    padding: $space-1 $space-3;
+    border: $border-width solid $color-ivory-border;
+    border-radius: $radius-full;
+    transition:
+      color $transition-base,
+      border-color $transition-base,
+      background-color $transition-base;
+
+    &:hover {
+      color: $color-gold-dark;
+      border-color: $color-gold;
+      background-color: $color-gold-subtle;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-focus;
+      outline-offset: 2px;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // DESCRIPTION
+  // ---------------------------------------------------------------------------
+
+  .description {
+    font-family: $font-body;
+    font-size: $fs-base;
+    line-height: $lh-relaxed;
+    color: $color-text-secondary;
+    margin: 0;
+
+    strong {
+      font-weight: $fw-semibold;
+      color: $color-green-forest;
+      margin-right: $space-1;
+    }
+  }
+
+  .why-text {
+    padding-left: $space-4;
+    border-left: 2px solid $color-gold;
+    color: $color-gold-dark;
+    font-weight: $fw-bold;
+
+
+    strong {
+      color: $color-gold-dark;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // TAGS
+  // ---------------------------------------------------------------------------
+
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    margin-top: auto;
+    padding-top: $space-2;
+  }
+
+  .tag {
+    font-family: $font-body;
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-wide;
+    color: $color-green-forest;
+    background-color: $color-ivory-warm;
+    border: $border-width solid $color-ivory-border;
+    border-radius: $radius-sm;
+    padding: $space-1 $space-3;
+    white-space: nowrap;
+    transition:
+      background-color $transition-fast,
+      border-color $transition-fast;
+
+    &:hover {
+      background-color: $color-gold-subtle;
+      border-color: $color-gold;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // RESPONSIVE
+  // ---------------------------------------------------------------------------
+
+  @include bp-down(sm) {
+    padding: $space-6;
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .title {
+      font-size: $fs-xl;
+    }
+  }
+}

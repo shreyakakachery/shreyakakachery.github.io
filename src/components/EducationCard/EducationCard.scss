@@ -1,0 +1,76 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+
+.portfolio-card.education-card {
+  @include card($color-ivory-warm);
+  padding: $space-8;
+
+  border-left: 3px solid $color-green-forest;
+  transition:
+    box-shadow $transition-base,
+    transform $transition-base,
+    border-left-color $transition-base;
+
+  &:hover {
+    border-left-color: $color-gold;
+  }
+
+
+  // ---------------------------------------------------------------------------
+  // HEADER
+  // ---------------------------------------------------------------------------
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+  }
+
+  .title {
+    font-family: $font-display;
+    font-size: $fs-xl;
+    font-weight: $fw-semibold;
+    letter-spacing: $ls-tight;
+    color: $color-green-deep;
+    line-height: $lh-snug;
+    margin: 0;
+  }
+
+  .duration {
+    font-family: $font-body;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-wide;
+    text-transform: uppercase;
+    color: $color-green-muted;
+    // background-color: $color-gold-subtle;
+    // border: $border-width solid rgba($color-gold, 0.35);
+    // border-radius: $radius-full;
+    // padding: $space-1 $space-3;
+    align-self: flex-start;
+  }
+
+  .subtitle {
+    font-family: $font-body;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    color: $color-text-muted;
+    letter-spacing: $ls-wide;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+
+  // ---------------------------------------------------------------------------
+  // RESPONSIVE
+  // ---------------------------------------------------------------------------
+
+  @include bp-down(sm) {
+    padding: $space-6;
+
+    .title {
+      font-size: $fs-lg;
+    }
+  }
+}

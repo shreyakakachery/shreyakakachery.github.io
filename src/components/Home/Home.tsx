@@ -24,7 +24,7 @@ export default function Home() {
                             <div className="image-placeholder"></div>
                         )}
                     </div>
-                    <h2 className="tagline">{homeData.tagline}</h2>
+                    <h2 className="home-tagline">{homeData.tagline}</h2>
                     <p className="bio">{homeData.bio}</p>
                 </div>
             </div>
