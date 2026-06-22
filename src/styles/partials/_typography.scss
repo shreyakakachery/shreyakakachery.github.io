@@ -1,0 +1,227 @@
+@import "variables";
+
+// -----------------------------------------------------------------------------
+// GOOGLE FONTS IMPORT
+// Cormorant Garamond (display) + Inter (body)
+// -----------------------------------------------------------------------------
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap");
+
+// -----------------------------------------------------------------------------
+// BASE RESET
+// -----------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $fs-base;
+  font-weight: $fw-regular;
+  line-height: $lh-normal;
+  color: $color-text-primary;
+  background-color: $color-ivory;
+}
+
+// -----------------------------------------------------------------------------
+// HEADINGS
+// -----------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-display;
+  font-weight: $fw-light;
+  line-height: $lh-tight;
+  letter-spacing: $ls-tight;
+  color: $color-text-primary;
+  margin: 0 0 $space-4;
+}
+
+h1 {
+  font-size: $fs-5xl;
+  font-weight: $fw-light;
+  letter-spacing: -0.04em;
+
+  @media (max-width: $bp-md) {
+    font-size: $fs-4xl;
+  }
+
+  @media (max-width: $bp-sm) {
+    font-size: $fs-3xl;
+  }
+}
+
+h2 {
+  font-size: $fs-4xl;
+  letter-spacing: -0.03em;
+
+  @media (max-width: $bp-md) {
+    font-size: $fs-3xl;
+  }
+
+  @media (max-width: $bp-sm) {
+    font-size: $fs-2xl;
+  }
+}
+
+h3 {
+  font-size: $fs-3xl;
+  letter-spacing: -0.02em;
+
+  @media (max-width: $bp-md) {
+    font-size: $fs-2xl;
+  }
+}
+
+h4 {
+  font-size: $fs-2xl;
+  font-weight: $fw-regular;
+}
+
+h5 {
+  font-size: $fs-xl;
+  font-weight: $fw-regular;
+}
+
+h6 {
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
+  font-family: $font-body; 
+  letter-spacing: $ls-wide;
+  text-transform: uppercase;
+}
+
+// -----------------------------------------------------------------------------
+// BODY COPY
+// -----------------------------------------------------------------------------
+
+p {
+  font-family: $font-body;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: $color-text-secondary;
+  margin: 0 0 $space-4;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.lead {
+    font-size: $fs-lg;
+    line-height: $lh-normal;
+    color: $color-text-primary;
+    font-weight: $fw-light;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// LINKS
+// -----------------------------------------------------------------------------
+
+a {
+  color: $color-green-forest;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition:
+    color $transition-base,
+    text-decoration-color $transition-base;
+
+  &:hover {
+    color: $color-gold;
+    text-decoration-color: $color-gold;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    outline-offset: 3px;
+    border-radius: $radius-sm;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// UTILITY TYPE CLASSES
+// -----------------------------------------------------------------------------
+
+.eyebrow {
+  display: block;
+  font-family: $font-body;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: $ls-widest;
+  text-transform: uppercase;
+  color: $color-gold;
+  margin-bottom: $space-3;
+}
+
+.display {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: $fw-light;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.caption {
+  font-size: $fs-sm;
+  color: $color-text-muted;
+  line-height: $lh-snug;
+}
+
+.section-label {
+  font-family: $font-body;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  letter-spacing: $ls-widest;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.pull-quote {
+  font-family: $font-display;
+  font-size: $fs-2xl;
+  font-style: italic;
+  font-weight: $fw-light;
+  line-height: $lh-snug;
+  color: $color-green-deep;
+  border-left: 3px solid $color-gold;
+  padding-left: $space-6;
+  margin: $space-8 0;
+}
+
+code,
+pre {
+  font-family: $font-mono;
+  font-size: $fs-sm;
+}
+
+code {
+  background-color: $color-ivory-warm;
+  border: $border-default;
+  border-radius: $radius-sm;
+  padding: 0.15em 0.4em;
+  color: $color-green-forest;
+}
+
+// -----------------------------------------------------------------------------
+// SELECTION
+// -----------------------------------------------------------------------------
+
+::selection {
+  background-color: $color-gold-subtle;
+  color: $color-green-deep;
+}

@@ -1,0 +1,325 @@
+@import "variables";
+
+// -----------------------------------------------------------------------------
+// BREAKPOINTS
+// Usage: @include bp(md) { ... }
+// -----------------------------------------------------------------------------
+
+@mixin bp($size) {
+  @if $size == sm {
+    @media (min-width: $bp-sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: $bp-md) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: $bp-lg) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: $bp-xl) {
+      @content;
+    }
+  } @else if $size == 2xl {
+    @media (min-width: $bp-2xl) {
+      @content;
+    }
+  }
+}
+
+@mixin bp-down($size) {
+  @if $size == sm {
+    @media (max-width: #{$bp-sm - 1px}) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (max-width: #{$bp-md - 1px}) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (max-width: #{$bp-lg - 1px}) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (max-width: #{$bp-xl - 1px}) {
+      @content;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CONTAINER
+// Usage: @include container;
+// -----------------------------------------------------------------------------
+
+@mixin container($max: $container-max) {
+  width: 100%;
+  max-width: $max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-gutter;
+  padding-right: $container-gutter;
+
+  @include bp(lg) {
+    padding-left: $container-gutter-lg;
+    padding-right: $container-gutter-lg;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// FLEX UTILITIES
+// Usage: @include flex-center;
+// -----------------------------------------------------------------------------
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// -----------------------------------------------------------------------------
+// GOLD RULE DIVIDER
+// Usage: @include gold-rule;  or  @include gold-rule(center);
+// -----------------------------------------------------------------------------
+
+@mixin gold-rule($align: left, $width: 48px) {
+  &::after {
+    content: "";
+    display: block;
+    width: $width;
+    height: 1px;
+    background-color: $color-gold;
+    margin-top: $space-4;
+
+    @if $align == center {
+      margin-left: auto;
+      margin-right: auto;
+    } @else if $align == right {
+      margin-left: auto;
+    }
+  }
+}
+
+@mixin gold-rule-line($width: 48px) {
+  width: $width;
+  height: 1px;
+  background-color: $color-gold;
+}
+
+// -----------------------------------------------------------------------------
+// SECTION SPACING
+// Usage: @include section-padding;
+// -----------------------------------------------------------------------------
+
+@mixin section-padding($top: $space-24, $bottom: $space-24) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+
+  @include bp-down(md) {
+    padding-top: $space-16;
+    padding-bottom: $space-16;
+  }
+
+  @include bp-down(sm) {
+    padding-top: $space-12;
+    padding-bottom: $space-12;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// BUTTON BASE
+// Usage: @include btn-base;
+// -----------------------------------------------------------------------------
+
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  font-family: $font-body;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  letter-spacing: $ls-wide;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: $space-3 $space-8;
+  border-radius: $radius-sm;
+  transition:
+    background-color $transition-base,
+    color $transition-base,
+    border-color $transition-base,
+    box-shadow $transition-base,
+    transform $transition-fast;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    outline-offset: 3px;
+  }
+}
+
+@mixin btn-primary {
+  @include btn-base;
+  background-color: $color-green-forest;
+  color: $color-text-inverse;
+
+  &:hover {
+    background-color: $color-green-mid;
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    background-color: $color-green-deep;
+  }
+}
+
+@mixin btn-secondary {
+  @include btn-base;
+  background-color: transparent;
+  color: $color-green-forest;
+  border: $border-width-thick solid $color-gold;
+
+  &:hover {
+    background-color: $color-gold-subtle;
+    color: $color-green-deep;
+  }
+}
+
+@mixin btn-ghost {
+  @include btn-base;
+  background-color: transparent;
+  color: $color-text-inverse;
+  border: $border-width solid rgba($color-text-inverse, 0.5);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: $color-gold;
+    color: $color-gold-light;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CARD
+// Usage: @include card;
+// -----------------------------------------------------------------------------
+
+@mixin card($bg: $color-ivory-warm) {
+  background-color: $bg;
+  border: $border-default;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  transition:
+    box-shadow $transition-base,
+    transform $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// DARK SECTION (green background with inverse text)
+// Usage: @include dark-section;
+// -----------------------------------------------------------------------------
+
+@mixin dark-section {
+  background-color: $color-green-deep;
+  color: $color-text-inverse;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-text-inverse;
+  }
+
+  p {
+    color: rgba($color-text-inverse, 0.8);
+  }
+
+  .eyebrow {
+    color: $color-gold-light;
+  }
+
+  a {
+    color: $color-gold-light;
+
+    &:hover {
+      color: $color-gold;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// VISUALLY HIDDEN
+// Usage: @include sr-only;
+// -----------------------------------------------------------------------------
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// -----------------------------------------------------------------------------
+// TRUNCATE TEXT
+// Usage: @include truncate;  or  @include truncate(3) for multiline
+// -----------------------------------------------------------------------------
+
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SMOOTH SCROLL IMAGE
+// Usage: @include image-cover;
+// -----------------------------------------------------------------------------
+
+@mixin image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
