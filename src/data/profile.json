@@ -1,9 +1,9 @@
 {
   "home": {
     "name": "Shreya Kakachery",
-    "tagline": "Jack of all trades, Master of Data Science",
-    "bio": "Actually, the full saying goes like this: 'Jack of all trades, master of none; still better than a master of one.' Here's my personal favourite: 'Curiosity killed the cat, but satisfaction brought it back.' Likewise, my goal is to expand my perspective; to live, learn, and grow. Experience is my teacher.",
-    "imagePath": null
+    "tagline": "Jack of All Trades, Master of Data Science",
+    "bio": "Curiosity killed the cat, but satisfaction brought it back. Likewise, my goal is to expand my perspective, to live, learn, and grow. Experience is my teacher.",
+    "imagePath": "headshot.jpg"
   },
   "education": [
     {
@@ -13,7 +13,7 @@
       "end": "Jun 2026"
     },
     {
-      "program": "BSc. Behavioural Neurosscience",
+      "program": "BSc. Behavioural Neuroscience",
       "institution": "University of British Columbia",
       "start": "Sep 2020",
       "end": "Apr 2024"
@@ -21,61 +21,346 @@
   ],
   "experience": [
     {
-      "role": "Language Database Administrator",
-      "location1": "Volentia Translation Services",
-      "location2": null,
-      "companyUrl": null,
-      "logoUrl": null,
-      "start": "Aug 2024",
-      "end": "Present",
-      "description": "Create and maintain a multilingual database of medical terminology. ",
-      "skills": ["Database management"]
-    },
-    {
       "role": "Exam Invigilator",
-      "location1": "CBTF",
-      "location2": "University of British Columbia",
-      "companyUrl": null,
+      "location1": "Computer-Based Testing Facility",
+      "location2": "UBC",
+      "companyUrl": "https://cbtf.ubc.ca/",
       "logoUrl": null,
       "start": "Jan 2026",
       "end": "Apr 2026",
-      "description": "Monitor and supervise examinations to ensure academic integrity. ",
-      "skills": ["Attention to detail"]
+      "description": "Monitored computer-based examinations, providing technical troubleshooting and maintaining a calm, secure testing environment for students under high stress.",
+      "skills": [
+        "Technical Troubleshooting",
+        "Crisis Management",
+        "Exam Security",
+        "Attention to Detail"
+      ]
+    },
+    {
+      "role": "Graduate Academic Assistant",
+      "location1": "University of British Columbia",
+      "location2": null,
+      "companyUrl": null,
+      "logoUrl": null,
+      "start": "Nov 2025",
+      "end": "Apr 2026",
+      "description": "Served on the Master of Data Science Admissions Committee, assisting with the evaluation and selection of incoming candidate applications.",
+      "skills": [
+        "Candidate Evaluation",
+        "Academic Administration",
+        "Confidentiality",
+        "Analytical Review"
+      ]
+    },
+    {
+      "role": "Mental Wellness Representative",
+      "location1": "UBC MDS",
+      "location2": null,
+      "companyUrl": null,
+      "logoUrl": null,
+      "start": "Sep 2025",
+      "end": "Jun 2026",
+      "description": "Acted as the cohort spokesperson by gathering student feedback through surveys, presenting findings to faculty, and organizing social events.",
+      "skills": [
+        "Advocacy",
+        "Survey Design",
+        "Event Planning",
+        "Interpersonal Communication"
+      ]
+    },
+    {
+      "role": "Language Database Administrator",
+      "location1": "Volentia",
+      "location2": null,
+      "companyUrl": "https://volentia.ca/",
+      "logoUrl": null,
+      "start": "Aug 2024",
+      "end": "Present",
+      "description": "Managed a multilingual medical terminology database of over 14,000 terms across 10 languages, coordinating with global translators to verify data accuracy.",
+      "skills": [
+        "Database Management",
+        "Cross-Functional Communication",
+        "Multilingual Data Curation",
+        "Project Coordination"
+      ]
+    },
+    {
+      "role": "Healthcare Interpreter",
+      "location1": "Volentia",
+      "location2": null,
+      "companyUrl": "https://volentia.ca/",
+      "logoUrl": null,
+      "start": "Jun 2023",
+      "end": "Aug 2024",
+      "description": "Facilitated communication between patients and medical professionals in Hindi, Tamil, Malayalam, and English, and translated clinical research documents.",
+      "skills": [
+        "English",
+        "Hindi",
+        "Tamil",
+        "Malayalam",
+        "Empathy",
+        "Accurate Communication",
+        "Medical Terminology"
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "location1": "Cognitive Neuroscience of Thought Lab",
+      "location2": "UBC",
+      "companyUrl": "https://www.christofflab.ca/",
+      "logoUrl": null,
+      "start": "May 2023",
+      "end": "Sep 2025",
+      "description": "Conducted independent research on ADHD and creativity using novel experimental paradigms, and analyzed fMRI data to map functional neural connectivity.",
+      "skills": [
+        "Science Communication",
+        "fMRI Data Analysis",
+        "Python",
+        "Experimental Design"
+      ]
+    },
+    {
+      "role": "English Instructor",
+      "location1": "Potts Education Studio",
+      "location2": null,
+      "companyUrl": "https://www.pottseducationstudio.com/",
+      "logoUrl": null,
+      "start": "Sep 2022",
+      "end": "Dec 2025",
+      "description": "Instructed elementary, high school, and university students in English comprehension and provided specialized coaching for the IELTS exam.",
+      "skills": [
+        "IELTS Coaching",
+        "ESL Teaching",
+        "Curriculum Delivery",
+        "Public Speaking"
+      ]
+    },
+    {
+      "role": "Peer Tutor",
+      "location1": "Alma Mater Society of UBC",
+      "location2": null,
+      "companyUrl": "https://www.ams.ubc.ca/support-services/student-services/tutoring/",
+      "logoUrl": null,
+      "start": "Sep 2022",
+      "end": "Aug 2024",
+      "description": "Tutored university students in chemistry, biology, statistics, neuroscience, and psychology. Adapted teaching methods to diverse learning styles.",
+      "skills": [
+        "Clear Explanations",
+        "Needs Assessment",
+        "Promoting Learning",
+        "STEM Tutoring"
+      ]
+    },
+    {
+      "role": "Teaching Assistant",
+      "location1": "Potts Education Studio",
+      "location2": null,
+      "companyUrl": "https://www.pottseducationstudio.com/",
+      "logoUrl": null,
+      "start": "May 2022",
+      "end": "Dec 2025",
+      "description": "Evaluated student coursework and provided constructive, tailored feedback to support academic improvement and comprehension.",
+      "skills": [
+        "Grading",
+        "Constructive Feedback",
+        "Student Mentorship",
+        "Written Communication"
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "location1": "Vision Lab",
+      "location2": "UBC",
+      "companyUrl": "https://visionlab.psych.ubc.ca/",
+      "logoUrl": null,
+      "start": "Mar 2022",
+      "end": "May 2023",
+      "description": "Led an independent research project investigating Theory of Mind and autism, programming novel psychological paradigms.",
+      "skills": [
+        "Statistics",
+        "Literature Review",
+        "PsychoPy",
+        "Experimental Psychology"
+      ]
+    },
+    {
+      "role": "Website and Media Director",
+      "location1": "UBC Neuroscience Association",
+      "location2": null,
+      "companyUrl": null,
+      "logoUrl": null,
+      "start": "Jan 2022",
+      "end": "Apr 2023",
+      "description": "Maintained the association's website and designed promotional graphics and social media campaigns to increase event engagement.",
+      "skills": [
+        "Graphic Design",
+        "Website Maintenance",
+        "Social Media Marketing",
+        "Canva"
+      ]
+    },
+    {
+      "role": "Taekwondo Instructor",
+      "location1": "Vancouver Martial Arts",
+      "location2": null,
+      "companyUrl": "https://vancouverma.ca/",
+      "logoUrl": null,
+      "start": "Oct 2016",
+      "end": "Jun 2025",
+      "description": "Independently structured and led group martial arts classes for children aged 5 to 12, fostering physical fitness and focus.",
+      "skills": [
+        "Discipline",
+        "Punctuality",
+        "Presence of Mind",
+        "Youth Leadership",
+        "Group Facilitation"
+      ]
     }
   ],
   "projects": [
     {
-      "title": "Shreya's Portfolio",
+      "title": "Portfolio",
       "githubLink": "https://github.com/shreyakakachery/shreyakakachery.github.io",
-      "liveLink": "https://shreyakakachery.github.io",
-      "description": "A website showcasing my projects and experience.",
-      "why": "To present my skills and accomplishments in a professional manner.",
-      "tools": ["React", "TypeScript", "Sass"]
+      "liveLink": "https://shreyakakachery.github.io/",
+      "description": "My personal website developed to showcase my academic credentials, professional experience, and technical projects.",
+      "why": "To showcase my skills and technical projects.",
+      "tools": ["React", "TypeScript", "SCSS"]
     },
     {
-      "title": "Healthcare Database Website",
+      "title": "Evaluating VLMs for PASER-Based Road Assessment",
       "githubLink": null,
       "liveLink": null,
-      "description": "A website displaying medical terminology translated in multiple languages.",
-      "why": "To create a resource for Volentia Trandlation Services",
-      "tools": ["Next.js", "TypeScript", "PicoCSS"]
+      "description": "Explores the reliability of Vision-Language Models for assessing asphalt pavement conditions using PASER guidelines from imagery.",
+      "why": "MDS capstone project in collaboration with PavePal Technologies",
+      "tools": ["Albumentations", "VLMs"]
+    },
+    {
+      "title": "Paper Plain",
+      "githubLink": "https://github.com/shreyakakachery/paper-plain",
+      "liveLink": "https://shreyakakachery.github.io/paper-plain/",
+      "description": "An accessible web platform dedicated to open-source science communication.",
+      "why": "Academic papers are very dense, I want to make science accessible.",
+      "tools": ["Quarto", "Python"]
+    },
+    {
+      "title": "Convene",
+      "githubLink": "https://github.com/shreyakakachery/convene",
+      "liveLink": null,
+      "description": "Meeting in the middle made easy. A web app that suggests fair meetup locations using real Metro Vancouver transit data from TransLink.",
+      "why": "To answer the question 'Where should we meet?'",
+      "tools": [
+        "React",
+        "JavaScript",
+        "Express",
+        "MySQL",
+        "Vercel",
+        "Heroku",
+        "JawsDB"
+      ]
+    },
+    {
+      "title": "Sudoku",
+      "githubLink": "https://github.com/shreyakakachery/sudoku",
+      "liveLink": null,
+      "description": "A clean, interactive web-based Sudoku game.",
+      "why": "I like sudoku",
+      "tools": ["Sudoku.js", "HTML", "JavaScript", "SCSS"]
+    },
+    {
+      "title": "Layoff Lens",
+      "githubLink": "https://github.com/shreyakakachery/DSCI-532_2026_11_LayoffLens",
+      "liveLink": "https://019c8d0c-d197-57fd-3fdf-d468eac4c556.share.connect.posit.cloud/",
+      "description": "A Python-based Shiny dashboard visualizing hiring and layoff trends from 2000 to 2025.",
+      "why": "My first time making a Shiny dashboard",
+      "tools": ["Python", "Shiny", "QueryChat", "Data Visualization"]
+    },
+    {
+      "title": "Layoff Lens in R",
+      "githubLink": "https://github.com/shreyakakachery/layoff-lens-r",
+      "liveLink": null,
+      "description": "An R Shiny dashboard tracking hiring and layoff trends across America from 2000 to 2025.",
+      "why": "Convert a Python dashbord to an R Shiny dashboard",
+      "tools": ["R", "Shiny"]
+    },
+
+    {
+      "title": "Trecento",
+      "githubLink": "https://github.com/shreyakakachery/trecento",
+      "liveLink": "https://shreyakakachery.github.io/trecento/",
+      "description": "A minimalist word counter application featuring an integrated stopwatch.",
+      "why": "To see if I could make a word counter website",
+      "tools": ["HTML", "CSS", "JavaScript"]
+    },
+
+    {
+      "title": "Watercolour Map of UBC Campus",
+      "githubLink": "https://github.com/shreyakakachery/ubc-campus-map",
+      "liveLink": null,
+      "description": "An interactive, watercolor-styled map of the UBC campus built with Leaflet.js.",
+      "why": "My first time working with geospatial data",
+      "tools": ["Leaflet.js"]
+    },
+    {
+      "title": "MediAction",
+      "githubLink": "https://github.com/shreyakakachery/mediaction",
+      "liveLink": "https://shreyakakachery.github.io/mediaction/",
+      "description": "An interactive website designed to visualize the mechanisms and actions of drugs.",
+      "why": "To visualize drug progression in the human body",
+      "tools": ["Next.js", "TypeScript", "Three.js"]
+    },
+
+    {
+      "title": "Multilingual Medical Terminology Website",
+      "githubLink": null,
+      "liveLink": null,
+      "description": "A multilingual website integrating a database of medical terminology translated across 10 different languages.",
+      "why": "A project for Volentia Translation Services",
+      "tools": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "NeonDB",
+        "Railway",
+        "Zapatos"
+      ]
+    },
+    {
+      "title": "OneVoice",
+      "githubLink": null,
+      "liveLink": null,
+      "description": "A live translation tool optimized for accented English speech. Winner of the BrainStation Microsoft Hackathon!",
+      "why": "Live transcription if often incorrect for accented English speech, so we wanted to fix that",
+      "tools": ["AssemblyAI"]
+    },
+    {
+      "title": "Geospatial Toolkit",
+      "githubLink": null,
+      "liveLink": null,
+      "description": "A custom Python package built for efficient geospatial data manipulation.",
+      "why": "My first time making a Python package",
+      "tools": ["PyPi"]
     }
   ],
   "contact": [
-    { "platform": "GitHub", 
-    "url": "https://github.com/shreyakakachery", 
-    "iconPath": null},
-    { "platform": "LinkedIn", 
-    "url": "https://www.linkedin.com/in/shreyakakachery/", 
-    "iconPath": null},
-    { "platform": "Medium", 
-    "url": "https://medium.com/@shreyakakachery", 
-    "iconPath": null},
-    { "platform": "SubStack", 
-    "url": "https://substack.com/@shreyakakachery", 
-    "iconPath": null},
-    { "platform": "YouTube", 
-    "url": "https://www.youtube.com/@shreycurious", 
-    "iconPath": null}
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/shreyakakachery",
+      "iconPath": null
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/shreyakakachery/",
+      "iconPath": null
+    },
+    {
+      "platform": "Medium",
+      "url": "https://medium.com/@shreyakakachery",
+      "iconPath": null
+    },
+    {
+      "platform": "SubStack",
+      "url": "https://substack.com/@shreyakakachery",
+      "iconPath": null
+    }
   ]
 }
