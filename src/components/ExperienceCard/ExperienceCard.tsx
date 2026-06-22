@@ -3,7 +3,6 @@ import './ExperienceCard.scss'
 interface ExperienceCardProps {
     role: string;
     location1: string;
-    location2: string | null;
     start: string;
     end: string;
     description: string;
@@ -13,7 +12,6 @@ interface ExperienceCardProps {
 export default function ExperienceCard({
     role, 
     location1, 
-    location2,
     start, 
     end, 
     description, 
